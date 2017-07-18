@@ -18,20 +18,20 @@
 /**
  * @param {number[]} nums
  * @return {number[][]}
- * Runtime: 172 ms
- * beats: 2.31%
+ * Runtime: 132 ms
+ * beats: 22.31%
  */
 var subsets = function(nums) {
-    let arr = [[]];
+    let arr = [];
     _subsets([], 0);
     return arr;
-    function _subsets(list, i) {
-        if (i >= nums.length) return;
-        list.push(nums[i]);
-        _subsets(list, i+1);
+    function _subsets(list, idx) {
         let l = Array.from(list);
         arr.push(l);
-        list.pop();
-        _subsets(list, i+1);
+        for (let i=idx; i<nums.length; i++) {
+            list.push(nums[i]);
+            _subsets(list, i+1);
+            list.pop();
+        }
     }
 };
