@@ -14,6 +14,8 @@
 /**
  * @param {number[]} nums
  * @return {number[][]}
+ * Runtime: 115 ms
+ * Beats: 99.48%
  */
 var permute = function(nums) {
     function swap(l, i, j) {
