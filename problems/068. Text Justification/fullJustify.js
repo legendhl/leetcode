@@ -22,6 +22,8 @@
  * @param {string[]} words
  * @param {number} maxWidth
  * @return {string[]}
+ * Runtime: 98 ms
+ * Beats: 82.86%
  */
 var fullJustify = function(words, maxWidth) {
     let lines = [], line = [], curLen = 0;
