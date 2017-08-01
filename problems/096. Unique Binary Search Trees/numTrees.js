@@ -12,6 +12,10 @@
 /**
  * @param {number} n
  * @return {number}
+ * Time: O(n2)
+ * Space: O(n)
+ * Runtime: 99 ms
+ * Beats: 41.27%
  */
 var numTrees = function(n) {
     // 0=>1
