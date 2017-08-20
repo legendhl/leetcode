@@ -9,6 +9,8 @@
 /**
  * @param {number} rowIndex
  * @return {number[]}
+ * Runtime: 122 ms
+ * Beats: 15.38%
  */
 var getRow = function(rowIndex) {
     if (rowIndex < 0) {
