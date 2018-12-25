@@ -3,7 +3,7 @@ function ListNode(val) {
     this.next = null;
 }
 
-function getListNode(arr) {
+function arrayToListNode(arr) {
     if (!arr || !arr.length) return null;
     let head = new ListNode(arr[0]), node = head;
     for (let i=1; i<arr.length; i++) {
