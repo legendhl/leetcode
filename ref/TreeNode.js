@@ -8,10 +8,11 @@ function arrayToTree(nodes) {
     let treeNodes = nodes.map(val => val === null || val === undefined ? null : new TreeNode(val));
     for (let i = 0; i < Math.floor(treeNodes.length / 2); i++) {
         let node = treeNodes[i];
+        if (!node) continue;
         node.left = treeNodes[i * 2 + 1];
         if (i * 2 + 2 < treeNodes.length) {
             node.right = treeNodes[i * 2 + 2];
         }
     }
-    return treeNodes;
+    return treeNodes[0];
 }
