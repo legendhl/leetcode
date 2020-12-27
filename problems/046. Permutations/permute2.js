@@ -32,3 +32,24 @@ var permute = function(nums) {
   }
   return ans;
 };
+
+var permute2 = function(nums) {
+  let ans = [];
+  let n = nums.length;
+  let vis = new Array(n).fill(false);
+  backtrack(0, []);
+  function backtrack(index, per) {
+    if (index === n) {
+      ans.push(per.slice());
+    }
+    for (let i = 0; i < n; i++) {
+      if (vis[i]) continue;
+      per.push(nums[i]);
+      vis[i] = true;
+      backtrack(index + 1, per);
+      per.pop();
+      vis[i] = false;
+    }
+  }
+  return ans;
+};
